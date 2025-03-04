@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+// See https://aka.ms/new-console-template for more information
 
 public class Estanterias
 {
@@ -6,7 +6,7 @@ public class Estanterias
     public string? nombre { get; set; }
     public Boolean activo { get; set; }
 
-    public List<Estanterias>? _Estaterias { get; set; }
+    public List<Niveles>? _Niveles { get; set; }
 }
 
 public class Niveles
