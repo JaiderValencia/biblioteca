@@ -4,8 +4,9 @@ public class Estaterias
 {
     public int id { get; set; }
     public string? nombre { get; set; }
+    public Boolean activo { get; set; }
 
-    public List<Estaterias>? _Estaterias { get; set; }    
+    public List<Estaterias>? _Estaterias { get; set; }
 }
 
 public class Niveles
@@ -18,10 +19,11 @@ public class Niveles
     public List<Libros>? _Libros { get; set; }
 }
 
-public class Categoria
+public class Categorias
 {
     public int id { get; set; }
     public string? nombre { get; set; }
+    public string? descripcion { get; set; }
 
     public List<Libros>? _Libros { get; set; }
 }
@@ -30,6 +32,7 @@ public class Autores
 {
     public int id { get; set; }
     public string? nombre { get; set; }
+    public string? apellido { get; set; }
 
     public List<Libros>? _Libros { get; set; }
 }
@@ -42,7 +45,7 @@ public class Libros
     public int Categoria { get; set; }
     public int Autor { get; set; }
 
-    public Categoria? _Categoria { get; set; }
+    public Categorias? _Categoria { get; set; }
     public Autores? _Autor { get; set; }
 
     public List<NumerosDeSeries>? _NumerosDeSeries { get; set; }
@@ -72,6 +75,7 @@ public class TiposDocumentos
 {
     public int id { get; set; }
     public string? nombre { get; set; }
+    public string? nombreCorto { get; set; }
 
     public List<Clientes>? _Clientes { get; set; }
 }
@@ -98,6 +102,6 @@ public class Prestamos
     public int Cliente { get; set; }
     public int Libro { get; set; }
 
-    public Clientes? _Cliente { get; set; }    
+    public Clientes? _Cliente { get; set; }
     public Libros? _Libro { get; set; }
 }
