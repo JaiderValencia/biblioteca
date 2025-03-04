@@ -1,12 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-public class Estaterias
+public class Estanterias
 {
     public int id { get; set; }
     public string? nombre { get; set; }
     public Boolean activo { get; set; }
 
-    public List<Estaterias>? _Estaterias { get; set; }
+    public List<Estanterias>? _Estaterias { get; set; }
 }
 
 public class Niveles
@@ -15,7 +15,7 @@ public class Niveles
     public string? nombre { get; set; }
     public int Estanteria { get; set; }
 
-    public Estaterias? _Estanteria { get; set; }
+    public Estanterias? _Estanteria { get; set; }
     public List<Libros>? _Libros { get; set; }
 }
 
