@@ -1,4 +1,37 @@
-// See https://aka.ms/new-console-template for more information
+﻿// See https://aka.ms/new-console-template for more information
+
+// var niveles = listaEstanterias.Where(estanteria => estanteria.id == 4).ToList();
+
+List<Estanterias> listaEstanterias = new List<Estanterias>();
+
+listaEstanterias.Add(new Estanterias()
+{
+    id = 1,
+    nombre = "5C",
+    activo = true
+});
+
+listaEstanterias.Add(new Estanterias()
+{
+    id = 2,
+    nombre = "4R",
+    activo = true
+});
+
+listaEstanterias.Add(new Estanterias()
+{
+    id = 3,
+    nombre = "3S",
+    activo = true
+});
+
+listaEstanterias.Add(new Estanterias()
+{
+    id = 4,
+    nombre = "45F",
+    activo = true
+});
+
 
 public class Estanterias
 {
