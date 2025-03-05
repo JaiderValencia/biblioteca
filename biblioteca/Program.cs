@@ -1,4 +1,4 @@
-// See https://aka.ms/new-console-template for more information
+﻿// See https://aka.ms/new-console-template for more information
 
 // var niveles = listaEstanterias.Where(estanteria => estanteria.id == 4).ToList();
 
@@ -369,6 +369,41 @@ listaPrestamos.Add(new Prestamos()
     _Cliente = listaClientes.First(cliente => cliente.id == 4)
 });
 
+foreach (var estanteria in listaEstanterias)
+{
+    estanteria._Niveles = listaNiveles.Where(nivel => nivel.id == estanteria.id).ToList();
+}
+
+foreach (var nivel in listaNiveles)
+{
+    nivel._Libros = listaNiveles_tiene_Libros.Where(nivelLibro => nivelLibro.Nivel == nivel.id).Select(nivelLibro => nivelLibro._Libro).ToList();
+}
+
+foreach (var libro in listaLibros)
+{
+    libro._NumerosDeSeries = listaNumerosDeSeries.Where(numeroSerie => numeroSerie.Libro == libro.id).ToList();
+    libro._Niveles = listaNiveles_tiene_Libros.Where(nivelLibro => nivelLibro.Libro == libro.id).Select(nivelLibro => nivelLibro._Nivel).ToList();
+}
+
+foreach (var categoria in listaCategorias)
+{
+    categoria._Libros = listaLibros.Where(libro => libro.Categoria == categoria.id).ToList();
+}
+
+foreach (var autor in listaAutores)
+{
+    autor._Libros = listaLibros.Where(libro => libro.Autor == autor.id).ToList();
+}
+
+foreach (var NumeroDeSeries in listaNumerosDeSeries)
+{
+    NumeroDeSeries._Prestamos = listaPrestamos.Where(prestamo => prestamo.Libro == NumeroDeSeries.id).ToList();
+}
+
+foreach (var cliente in listaClientes)
+{
+    cliente._Prestamos = listaPrestamos.Where(prestamo => prestamo.Cliente == cliente.id).ToList();
+}
 
 public class Estanterias
 {
