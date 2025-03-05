@@ -405,6 +405,11 @@ foreach (var cliente in listaClientes)
     cliente._Prestamos = listaPrestamos.Where(prestamo => prestamo.Cliente == cliente.id).ToList();
 }
 
+foreach (var tipoDocumento in listaTiposDocumentos)
+{
+    tipoDocumento._Clientes = listaClientes.Where(cliente => cliente.TipoDocumento == tipoDocumento.id).ToList();
+}
+
 public class Estanterias
 {
     public int id { get; set; }
