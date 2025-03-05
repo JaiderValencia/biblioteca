@@ -134,7 +134,7 @@ public class Prestamos
     public int id { get; set; }
     public DateTime fechaInicio { get; set; }
     public DateTime fechaFinal { get; set; }
-    public DateTime fechaDevolucion { get; set; }
+    public DateTime fechaEntregado { get; set; }
     public int Cliente { get; set; }
     public int Libro { get; set; }
 
