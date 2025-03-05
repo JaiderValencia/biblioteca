@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+// See https://aka.ms/new-console-template for more information
 
 // var niveles = listaEstanterias.Where(estanteria => estanteria.id == 4).ToList();
 
@@ -431,6 +431,7 @@ public class NumerosDeSeries
     public int Libro { get; set; }
 
     public Libros? _Libro { get; set; }
+    public List<Prestamos>? _Prestamos { get; set; }
 }
 
 public class Niveles_tiene_Libros
