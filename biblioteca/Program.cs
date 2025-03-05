@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+// See https://aka.ms/new-console-template for more information
 
 // var niveles = listaEstanterias.Where(estanteria => estanteria.id == 4).ToList();
 
@@ -66,6 +66,8 @@ public class Autores
     public int id { get; set; }
     public string? nombre { get; set; }
     public string? apellido { get; set; }
+
+    public DateOnly fechaNacimiento { get; set; }
 
     public List<Libros>? _Libros { get; set; }
 }
