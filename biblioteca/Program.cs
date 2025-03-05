@@ -465,6 +465,7 @@ public class Clientes
     public int TipoDocumento { get; set; }
 
     public TiposDocumentos? _TipoDocumento { get; set; }
+    public List<Prestamos>? _Prestamos { get; set; }
 }
 
 public class Prestamos
